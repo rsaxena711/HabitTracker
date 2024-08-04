@@ -86,7 +86,7 @@ const Navbar = ({ name }) => {
               >
                 Cancel
               </button>
-              <button type="button" className="btn btn-primary" onClick={handleSave}>
+              <button type="button" className="btn btn-primary" onClick={handleSave} data-bs-dismiss="modal">
                 Save
               </button>
             </div>
