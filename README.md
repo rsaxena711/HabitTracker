@@ -14,4 +14,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-You can see my Poroject live on : [ https://habit-tracker-demo-spider.netlify.app/](https://habit-tracker-demo-spider.netlify.app/)
+You can see my Poroject live on : [https://riyareacthabittracker.netlify.app/](https://riyareacthabittracker.netlify.app/)
