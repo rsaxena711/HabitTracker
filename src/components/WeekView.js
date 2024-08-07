@@ -19,14 +19,14 @@ const WeekView = () => {
   return (
     <>
       <Navbar name="Week View" />
-      <h1 className="text-center" style={{textTransform:"capitalize"}}>{habit.name}</h1>
+      <h1 className="text-center text-dark mt-3" style={{textTransform:"capitalize"}}>{habit.name}</h1>
       <div className="days-container">
         {habit.weekLog.map((day,index)=><DayView day={day} key={index}/>)}
       </div>
       <div className="d-grid gap-2 col-6 mx-auto mt-5">
-        <button className="btn btn-primary" type="button">
-          <Link to="/">Back to Detail View</Link>
-        </button>
+      <Link to="/" className="btn btn-primary">
+          Back to Detail View
+      </Link>
       </div>
     </>
   );

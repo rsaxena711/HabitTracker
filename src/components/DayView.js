@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { habitDone, habitNone, habitUnDone } from "../redux/features/habitSlice";
+import {toast} from 'react-hot-toast';
 
 const DayView = ({day}) => {
   // get today date
@@ -17,7 +18,7 @@ const DayView = ({day}) => {
   // function call after click done icon--------------
   const markToDone=()=>{
     if(day.id>todayDay){
-      alert("You cannot change your next days status")
+      toast.error("You cannot change your next days status")
       return;
     }
     // call habit done action from reducer
@@ -28,7 +29,7 @@ const DayView = ({day}) => {
   // function call after click undone icon------------
   const markToUnDone=()=>{
     if(day.id>todayDay){
-      alert("You cannot change your next days status")
+      toast.error("You cannot change your next days status")
       return;
     }
     // call habit undone action from reducer
@@ -39,7 +40,7 @@ const DayView = ({day}) => {
   // function call after click none icon--------------
   const markToNone=()=>{
     if(day.id>todayDay){
-      alert("You cannot change your next days status")
+      toast.error("You cannot change your next days status")
       return;
     }
     // call habit none action from reducer

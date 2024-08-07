@@ -1,4 +1,5 @@
 /* style add for all element */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 * {
   margin: 0%;
   padding: 0%;
@@ -18,25 +19,33 @@ body {
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #171717;
+  background-color: #F5EDED;
   color: white;
 }
-
+body::-webkit-scrollbar{
+  display: none;
+}
 /* style root div */
-#root{
-  width: 80%;
+/* #root{
+  width: 100%;
   border-right: 1px solid #323232;
   border-left: 1px solid #323232;
-}
+} */
 
 /* style navbar component ---------------------------------*/
 .navbar{
+  width: 100vw;
+  position: sticky;
   align-items: center;
   display: flex;
+  background-color: #6482AD;
   height: 100px;
   padding: 0px 20px;
   justify-content: space-between;
   border-bottom: 1px solid #323232;
+}
+.navbar h3{
+  font-family: "Pacifico", cursive;
 }
 .right-nav{
   display: flex;
@@ -48,14 +57,31 @@ body {
 }
 .addhabit-btn{
   cursor: pointer;
-  color: white;
-  background-color: #3662CC;
+  color: black;
+  background-color: #E2DAD6;
   padding: 8px 20px;
   border-radius: 7px;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 8px #222;
+}
+.addhabit-btn:active{
+  box-shadow: none;
+  transform: translate(3px,3px);
+  transition:all 0.3s;
+
 }
 /* modal */
 .modal-content{
-  background-color: #333333;
+  background-color: white;
+  color: black;
+}
+.modal-content input{
+  outline: none;
+  border: 2px solid #0B5ED7;
+}
+.modal-content input:focus{
+  border-color: #0B5ED7;
 }
 .modal-header{
   border: none;
@@ -68,30 +94,38 @@ body {
 /* habits components style------------------------------ */
 .habits{
   width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* habit under habits component */
 .habit{
-  width: 100%;
+  width:80%;
   height: 100px;
-  border-bottom: 1px solid #323232;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #E2DAD6;
+  color:black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
 }
 .habit:hover{
-  background-color: #323232;
+  background-color: #E2DAD6;
 }
 .habit-left{
   display: flex;
   align-items: center;
 }
 .habit-left i{
-  color: #2AA8D0;
+  color: #1c2d45;
   padding: 10px;
   border-radius: 50%;
-  background-color: #304950;
+  background-color: #7FA1C3;
   margin-right: 10px;
 }
 .day-complete{
@@ -105,7 +139,7 @@ body {
 .log-btn{
   text-decoration: none;
   cursor: pointer;
-  background-color: #424242;
+  background-color: #6482AD;
   padding: 10px;
   border-radius: 7px;
   margin-right: 10px;
@@ -122,7 +156,8 @@ body {
   cursor: pointer;
   padding: 10px;
   border-radius: 7px;
-  background-color: #424242;
+  background-color: transparent;
+  color: red;
 }
 /* ------------------------------------------------------*/
 
@@ -130,13 +165,17 @@ body {
 .days-container{
   margin: 20px 0px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+  padding: 15px;
 }
 /* style day view component */
 .day-container{
-  height: 100px;
-  width: 150px;
-  background-color: #323232;
+  height: 110px;
+  width: 175px;
+  background-color: #6482AD;
   border-radius: 20px;
   padding: 5px;
 }
@@ -145,9 +184,10 @@ p{
 }
 .circle-icon{
   font-size: 24px;
-  margin: 5px 11px;
+  margin: 5px 15px;
   /* color: #0B5ED7; */
   cursor: pointer;
+
 }
 .active{
   color: #0B5ED7 ;
